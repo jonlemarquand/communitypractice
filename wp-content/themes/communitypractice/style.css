@@ -124,11 +124,24 @@ h1 {
   text-align: center;
   text-transform: uppercase; }
 
+h2 {
+  color: #000000;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px; }
+
 p {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px; }
+
+a {
+  color: #000000; }
+  a :visited {
+    color: #000000; }
 
 header {
   width: 100%; }
@@ -167,7 +180,8 @@ header {
   align-items: center;
   margin-bottom: 120px; }
   .home-content .home-logo {
-    width: 350px; }
+    width: 350px;
+    margin: -15px auto; }
   .home-content .home-div {
     display: flex;
     flex-direction: column;
@@ -211,5 +225,73 @@ header {
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
   flex: 1 1 80px; }
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between; }
+  .footer-columns .bigmenuhead {
+    font-family: "Oswald", sans-serif;
+    line-height: 23px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 10px; }
+
+.white-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px; }
+  .white-link:hover {
+    color: #E5007D;
+    text-decoration: underline; }
+  .white-link li {
+    list-style: none;
+    margin-left: 10px;
+    margin-bottom: 5px; }
+
+.general-page-content {
+  min-height: 600px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 120px; }
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between; }
+
+#menu-logged-in-main, #menu-logged-out-menu {
+  margin-top: 15px;
+  display: flex;
+  color: #000000; }
+  #menu-logged-in-main a, #menu-logged-out-menu a {
+    text-decoration: none; }
+    #menu-logged-in-main a :visited, #menu-logged-out-menu a :visited {
+      color: #000000; }
+    #menu-logged-in-main a :hover, #menu-logged-out-menu a :hover {
+      color: #20B9C7; }
+  #menu-logged-in-main li, #menu-logged-out-menu li {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 10px; }
+  #menu-logged-in-main .current_page_item a, #menu-logged-out-menu .current_page_item a {
+    color: #E5007D !important; }
+
+.nav-logo {
+  height: 80px;
+  margin-top: -10px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,12 +16,28 @@
         Log Out
     </a>
     </div>
+    <div class="nav-menu">
+        <img class="nav-logo" src="/wp-content/uploads/2020/07/2012-transparency-international-logo-subline-01.png" />
+    <?php wp_nav_menu( array( 
+        'theme_location' => 'header-menu',
+        'link_before' => '<div class="nav-link">',
+        'link_after' => '</div>'
+        ) );?>
+    </div>
 <?php } else { // not logged in ?>
 
     <div class="loginbar">
         <div class="link-button log-button">
             Log In
         </div>
+    </div>
+    <div class="nav-menu">
+        <img class="nav-logo" src="/wp-content/uploads/2020/07/2012-transparency-international-logo-subline-01.png" />
+    <?php wp_nav_menu( array( 
+        'theme_location' => 'logged-out-menu',
+        'link_before' => '<div class="nav-link">',
+        'link_after' => '</div>'
+        ) );?>
     </div>
 
 <?php } ?>

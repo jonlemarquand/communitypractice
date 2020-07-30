@@ -48,11 +48,27 @@ h1 {
     text-transform: uppercase; 
 }
 
+h2 {
+    color: $tiblack;
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+}
+
 p {
     font-family: $secondaryFont;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+}
+
+a {
+    color: $tiblack;
+    :visited {
+        color: $tiblack;
+    }
 }
 
 header {
@@ -101,6 +117,7 @@ header {
 
     .home-logo {
         width: 350px;
+        margin: -15px auto;
     }
     .home-div {
         display: flex;
@@ -153,4 +170,95 @@ header {
     color: $tiwhite;
     font-family: $secondaryFont;
     flex: 1 1 80px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+
+    .bigmenuhead {
+        font-family: $primaryFont;
+        line-height: 23px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 10px;
+        color: $tiwhite;
+        font-size: 18px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+}
+
+.white-link {
+    color: $tiwhite;
+    text-decoration: none;
+    font-size: 16px;
+
+    &:hover {
+        color: $tipink;
+        text-decoration: underline;
+    }
+
+    li {
+        list-style: none;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+.general-page-content {
+    min-height: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-logged-in-main, #menu-logged-out-menu {
+    margin-top: 15px;
+    display: flex;
+    color: $tiblack;
+
+    a {
+        text-decoration: none;
+        :visited {
+            color: $tiblack;
+        }
+        :hover {
+            color: $tigreen;
+        }
+    }
+
+    li {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0 10px;
+    }
+
+    .current_page_item {
+        a {        
+        color: $tipink !important;
+        }
+    }
+}
+
+.nav-logo {
+    height: 80px;
+    margin-top: -10px;
 }

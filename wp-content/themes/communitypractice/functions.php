@@ -114,3 +114,32 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+function register_my_menus() {
+    register_nav_menus(
+      array(
+        'header-menu' => __( 'Header Menu' ),
+        'logged-out-menu' => __( 'Logged Out Menu' ),
+       )
+     );
+   }
+   add_action( 'init', 'register_my_menus' );
+
+function communitypractice_custom_post_type() {
+    register_post_type('discussion',
+        array(
+            'labels'      => array(
+                'name'          => __( 'Discussions', 'textdomain' ),
+                'singular_name' => __( 'Discussion', 'textdomain' ),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+            'rewrite'     => array( 'slug' => 'discussions' ), // my custom slug
+            'show_in_menu' => true,
+            'menu_icon' => 'dashicons-format-chat',
+            'menu_position' => 2,
+            'capability_type' => 'post',
+            'taxonomies' => array( 'category', 'region' ),
+        )
+    );
+}
+add_action('init', 'communitypractice_custom_post_type');
