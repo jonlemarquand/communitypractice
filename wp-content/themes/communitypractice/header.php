@@ -4,6 +4,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/422386384b.js" crossorigin="anonymous"></script>
+
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -15,6 +17,7 @@
     <a class="link-button log-button" href="<?php echo wp_logout_url(get_permalink()); ?>">
         Log Out
     </a>
+    <a href="/profile" class="log-username"><i class="fas fa-user"></i><p><?php echo wp_get_current_user()->display_name; ?></p></a>
     </div>
     <div class="nav-menu">
         <img class="nav-logo" src="/wp-content/uploads/2020/07/2012-transparency-international-logo-subline-01.png" />

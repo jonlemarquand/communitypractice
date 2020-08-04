@@ -17,7 +17,7 @@
 
    foreach($cats as $cat) {
 ?>
-       <a class="white-link" href="<?php echo get_category_link($cat->slug); ?>">
+       <a class="white-link" href="<?php echo get_category_link($cat->term_id); ?>">
            <li><?php echo $cat->name; ?></li>
        </a>
 <?php
@@ -38,8 +38,8 @@
 
    foreach($cats as $cat) {
 ?>
-       <a class="white-link" href="<?php echo get_category_link($cat->slug); ?>">
-           <li><?php echo $cat->name; ?></li>
+       <a class="white-link" href="<?php echo get_category_link($cat->term_id); ?>">
+           <li><?php echo $cat->name;?></li>
        </a>
 <?php
    }

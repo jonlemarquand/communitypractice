@@ -143,3 +143,41 @@ function communitypractice_custom_post_type() {
     );
 }
 add_action('init', 'communitypractice_custom_post_type');
+
+function communitypractice_member_role() {
+    add_role(
+        'member_role',
+        'Member',
+        [
+            'read'         => true,
+            'edit_posts'   => false,
+            'upload_files' => false,
+        ]
+    );
+}
+add_action('init', 'communitypractice_member_role');
+
+function community_practice_member_role_caps() {
+    $role = get_role( 'member_role' );
+    $role->add_cap( 'manage_options', false );
+}
+ 
+// Add simple_role capabilities, priority must be after the initial role definition.
+add_action( 'init', 'community_practice_member_role_caps', 11 );
+if (!current_user_can('manage_options')) {
+    add_filter('show_admin_bar', '__return_false');
+}
+
+function communitypractice_expert_role() {
+    add_role(
+        'expert_role',
+        'Expert',
+        [
+            'read'         => true,
+            'edit_posts'   => false,
+            'upload_files' => false,
+            'manage_options' => false
+        ]
+    );
+}
+add_action('init', 'communitypractice_expert_role');

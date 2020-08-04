@@ -150,10 +150,25 @@ header {
     color: #ffffff;
     height: 40px;
     display: flex;
-    flex-direction: row-reverse; }
+    flex-direction: row-reverse;
+    align-items: center; }
   header .log-button {
+    height: 100%;
     width: 120px;
     text-decoration: none; }
+  header .log-username {
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #ffffff;
+    text-decoration: none; }
+    header .log-username .fa-user {
+      margin-right: 10px; }
+    header .log-username:hover {
+      background: #20B9C7;
+      cursor: pointer; }
 
 .link-button {
   background: #E5007D;

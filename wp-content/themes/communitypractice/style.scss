@@ -80,11 +80,31 @@ header {
         height: 40px;
         display: flex;
         flex-direction: row-reverse;
+        align-items: center;
     }
 
     .log-button {
+        height: 100%;
         width: 120px;
         text-decoration: none;
+    }
+
+    .log-username {
+        padding: 0 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: $tiwhite;
+        text-decoration: none;
+        
+        .fa-user {
+            margin-right: 10px;
+        }
+        &:hover {
+            background: $tigreen;
+            cursor: pointer;
+        }
     }
 }
 
