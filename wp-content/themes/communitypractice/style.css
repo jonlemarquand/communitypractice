@@ -309,4 +309,52 @@ header {
   height: 80px;
   margin-top: -10px; }
 
+.registration-form {
+  display: flex;
+  flex-direction: column; }
+  .registration-form h2 {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  .registration-form label {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    color: #000000;
+    margin: 10px 0; }
+  .registration-form input[type=text], .registration-form input[type=password], .registration-form input[type=email] {
+    margin-bottom: 5px;
+    padding: 5px;
+    font-family: "Open Sans", sans-serif;
+    border: 1px solid #000000; }
+    .registration-form input[type=text]:focus, .registration-form input[type=password]:focus, .registration-form input[type=email]:focus {
+      border: 2px solid #3695d8;
+      outline: none; }
+  .registration-form input[type=submit] {
+    width: 180px;
+    height: 60px;
+    background: #3695d8;
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    margin-top: 20px;
+    font-size: 18px; }
+    .registration-form input[type=submit]:hover {
+      background: #20B9C7; }
+  .registration-form .member-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; }
+  .registration-form .member-type {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 20px 0; }
+  .registration-form .expert-columns {
+    display: flex; }
+    .registration-form .expert-columns .expert-column {
+      display: flex;
+      flex-direction: column;
+      margin-right: 40px; }
+
+.options {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */

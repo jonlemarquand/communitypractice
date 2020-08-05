@@ -20,7 +20,9 @@
     <a href="/profile" class="log-username"><i class="fas fa-user"></i><p><?php echo wp_get_current_user()->display_name; ?></p></a>
     </div>
     <div class="nav-menu">
-        <img class="nav-logo" src="/wp-content/uploads/2020/07/2012-transparency-international-logo-subline-01.png" />
+        <a href="/">
+            <img class="nav-logo" src="/wp-content/uploads/2020/07/2012-transparency-international-logo-subline-01.png" />
+        </a>
     <?php wp_nav_menu( array( 
         'theme_location' => 'header-menu',
         'link_before' => '<div class="nav-link">',
@@ -35,7 +37,9 @@
         </div>
     </div>
     <div class="nav-menu">
-        <img class="nav-logo" src="/wp-content/uploads/2020/07/2012-transparency-international-logo-subline-01.png" />
+        <a href="/">
+            <img class="nav-logo" src="/wp-content/uploads/2020/07/2012-transparency-international-logo-subline-01.png" />
+        </a>
     <?php wp_nav_menu( array( 
         'theme_location' => 'logged-out-menu',
         'link_before' => '<div class="nav-link">',

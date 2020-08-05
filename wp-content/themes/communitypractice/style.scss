@@ -282,3 +282,75 @@ header {
     height: 80px;
     margin-top: -10px;
 }
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-family: $primaryFont;
+        font-size: 18px;
+        color: $tiblack;
+        margin: 10px 0;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        margin-bottom: 5px;
+        padding: 5px;
+        font-family: $secondaryFont;
+        border: 1px solid $tiblack;
+        
+        &:focus {
+            border: 2px solid $tiblue;
+            outline: none;
+        }
+    
+    }
+
+    input[type=submit] {
+        width: 180px;
+        height: 60px;
+        background: $tiblue;
+        color: $tiwhite;
+        font-family: $primaryFont;
+        margin-top: 20px;
+        font-size: 18px;
+
+        &:hover {
+            background: $tigreen;
+        }
+    }
+
+    .member-info {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+    }
+
+    .member-type {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        margin: 20px 0;
+    }
+
+    .expert-columns {
+        display: flex;
+
+        .expert-column {
+            display: flex;
+            flex-direction: column;
+            margin-right: 40px;
+        }
+    }
+
+}
+
+.options {
+    display: none;
+}

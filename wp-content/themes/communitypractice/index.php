@@ -26,8 +26,8 @@ of the Open Contracting community.</div>
         <p>Explore our Knowledge Base by category or region, see Expert profiles or find upcoming events.</p>
     </div>
     <div class="next-step">
-        <div class="link-button">Engage
-        </div>
+        <a href="/discussions" class="link-button">Engage
+        </a>
         <p>Join the discussion and see what other practitioners have to say.</p>
     </div>
 </div>
@@ -44,8 +44,8 @@ of the Open Contracting community.</div>
 </div>
 <div class="options-section">
     <div class="next-step">
-        <div class="link-button">Register
-        </div>
+        <a class="link-button" href="/register">Register
+        </a>
         <p>Join discussions, share your resources and get the most out of the Knowledge Base by signing up.</p>
     </div>
     <div class="next-step">
@@ -54,8 +54,8 @@ of the Open Contracting community.</div>
         <p>Explore our Knowledge Base by category or region, see Expert profiles or find upcoming events.</p>
     </div>
     <div class="next-step">
-        <div class="link-button">Engage
-        </div>
+    <a href="/discussions" class="link-button">Engage
+        </a>
         <p>Join the discussion and see what other practitioners have to say.</p>
     </div>
 </div>
