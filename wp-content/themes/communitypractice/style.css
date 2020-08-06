@@ -454,5 +454,14 @@ input[type=submit] {
   margin: 10px 0; }
   .discussion-template .logged-in-as a {
     color: #ffffff; }
+.discussion-template .must-log-in a {
+  color: #ffffff;
+  text-decoration: underline; }
+
+.tax-header {
+  font-size: 28px;
+  color: #3695d8;
+  margin-bottom: -20px;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */

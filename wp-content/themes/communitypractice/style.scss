@@ -498,4 +498,17 @@ input[type=submit] {
             color: $tiwhite;
         }
     }
+    .must-log-in {
+        a {
+            color: $tiwhite;
+            text-decoration: underline;
+        }
+    }
+}
+
+.tax-header {
+    font-size: 28px;
+    color: $tiblue;
+    margin-bottom: -20px;
+    text-transform: uppercase;
 }

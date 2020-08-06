@@ -15,20 +15,19 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
             <div class="general-page-content">
-                <h1>Discussions</h1>
-                <h2>Filter By Region</h2>
-                <h2>Filter By Category</h2>
-
+                <h1><?php single_term_title(); ?></h1>
+                <h2 class="tax-header">Discussions:</h2>
                 <?php
+    $term = get_queried_object()->slug;
     $args = array(
       'post_type' => 'discussion',
-      /*'tax_query' => array(
+      'tax_query' => array(
         array(
-          'taxonomy' => 'product_category',
+          'taxonomy' => 'region',
           'field' => 'slug',
-          'terms' => 'boardgames'
+          'terms' => $term
         )
-      )*/
+      )
     );
     $discussions = new WP_Query( $args );
     if( $discussions->have_posts() ) {

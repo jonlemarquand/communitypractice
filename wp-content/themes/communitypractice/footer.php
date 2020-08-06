@@ -10,7 +10,6 @@
                'taxonomy'         => 'category',
                'hide_empty'       => 0,
                'orderby'          => 'name',
-               'exclude' => 'uncategorized'
            );
 
    $cats = get_categories($args);
@@ -47,9 +46,32 @@
         </div>
         <div class="footer-column">            
             <div class="bigmenuhead">Discussions</div>
-        </div>
-        <div class="footer-column">            
-            <div class="bigmenuhead">Events</div>
+            <ul>
+            <?php
+                $args = array(
+                    'post_type' => 'discussion',
+                    /*'tax_query' => array(
+                      array(
+                        'taxonomy' => 'product_category',
+                        'field' => 'slug',
+                        'terms' => 'boardgames'
+                      )
+                    )*/
+                  );
+            $discussions = new WP_Query( $args );
+    if( $discussions->have_posts() ) {
+      while( $discussions->have_posts() ) {
+        $discussions->the_post();
+        ?>
+          <a class="white-link" href="<?php the_permalink() ?>"><li><?php the_title() ?></li></a>
+        <?php
+      }
+    }
+    else {
+      echo 'There are no discussions currently.';
+    }
+  ?>
+  </ul>
         </div>
     </div>
 </div>
