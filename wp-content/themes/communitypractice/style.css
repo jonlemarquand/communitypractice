@@ -139,7 +139,8 @@ p {
   font-size: 16px; }
 
 a {
-  color: #000000; }
+  color: #000000;
+  text-decoration: none; }
   a :visited {
     color: #000000; }
 
@@ -328,16 +329,6 @@ header {
     .registration-form input[type=text]:focus, .registration-form input[type=password]:focus, .registration-form input[type=email]:focus {
       border: 2px solid #3695d8;
       outline: none; }
-  .registration-form input[type=submit] {
-    width: 180px;
-    height: 60px;
-    background: #3695d8;
-    color: #ffffff;
-    font-family: "Oswald", sans-serif;
-    margin-top: 20px;
-    font-size: 18px; }
-    .registration-form input[type=submit]:hover {
-      background: #20B9C7; }
   .registration-form .member-info {
     display: flex;
     flex-direction: column;
@@ -354,7 +345,114 @@ header {
       flex-direction: column;
       margin-right: 40px; }
 
+input[type=submit] {
+  width: 180px;
+  height: 60px;
+  background: #E5007D;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  margin-top: 20px;
+  font-size: 18px;
+  border: 0; }
+  input[type=submit]:hover {
+    background: #20B9C7; }
+
 .options {
   display: none; }
+
+.post-summary {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column; }
+  .post-summary h2 {
+    color: #3695d8;
+    text-decoration: none;
+    margin-bottom: 5px; }
+    .post-summary h2:hover {
+      color: #20B9C7; }
+  .post-summary .post-info-box {
+    display: flex;
+    margin: 5px 0; }
+    .post-summary .post-info-box .post-info {
+      margin-right: 20px; }
+      .post-summary .post-info-box .post-info i {
+        color: #3695d8; }
+      .post-summary .post-info-box .post-info a:hover {
+        color: #20B9C7; }
+  .post-summary .post-content {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin-top: 10px; }
+
+.view-button {
+  width: 140px;
+  margin-top: 20px;
+  padding: 10px;
+  background: #E5007D;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  text-align: center; }
+  .view-button:hover {
+    background: #20B9C7; }
+
+.discussion-template h1 {
+  text-align: left;
+  line-height: 64px;
+  margin-bottom: 20px; }
+.discussion-template h2 {
+  color: #3695d8;
+  margin-top: 20px; }
+.discussion-template .post-info-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px; }
+  .discussion-template .post-info-box .post-info {
+    margin-right: 20px; }
+.discussion-template .comment-author {
+  display: flex;
+  align-items: center; }
+.discussion-template .avatar {
+  border-radius: 50%; }
+.discussion-template .fn {
+  color: #3695d8;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  margin-left: 10px; }
+.discussion-template .says, .discussion-template .comments-title {
+  display: none; }
+.discussion-template ul .children {
+  margin-left: 40px; }
+.discussion-template .comment-respond {
+  margin: 20px 0;
+  background: #3695d8;
+  color: #ffffff;
+  padding: 20px; }
+  .discussion-template .comment-respond h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 21px;
+    color: #ffffff;
+    margin-bottom: 10px; }
+  .discussion-template .comment-respond label {
+    margin-bottom: 10px; }
+.discussion-template .comment-form-comment {
+  display: flex;
+  flex-direction: column; }
+.discussion-template .comment-meta {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px; }
+.discussion-template .comment-body {
+  margin: 20px 0; }
+.discussion-template .reply {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px; }
+  .discussion-template .reply a {
+    color: #E5007D; }
+.discussion-template .logged-in-as {
+  margin: 10px 0; }
+  .discussion-template .logged-in-as a {
+    color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */

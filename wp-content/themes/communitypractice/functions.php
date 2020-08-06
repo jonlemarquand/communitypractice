@@ -139,6 +139,7 @@ function communitypractice_custom_post_type() {
             'menu_position' => 2,
             'capability_type' => 'post',
             'taxonomies' => array( 'category', 'region' ),
+            'supports' => array('title', 'editor', 'excerpt', 'comments')
         )
     );
 }
