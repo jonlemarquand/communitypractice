@@ -67,8 +67,9 @@
         <?php
       }
     }
-    else {
-      echo 'There are no discussions currently.';
+    else { ?>
+      <p class="no-found"><?php echo 'No discussions found'; ?></p> 
+  <?php
     }
   ?>
   </ul>
@@ -77,6 +78,7 @@
 </div>
 </footer>
 </div>
+<?php /*<script src="/wp-content/themes/communitypractice/js/login.js"*/ ?>
 <?php wp_footer(); ?>
 </body>
 </html>

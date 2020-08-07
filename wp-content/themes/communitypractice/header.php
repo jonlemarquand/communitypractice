@@ -30,7 +30,6 @@
         ) );?>
     </div>
 <?php } else { // not logged in ?>
-
     <div class="loginbar">
         <div class="link-button log-button">
             Log In
@@ -49,7 +48,33 @@
 
 <?php } ?>
 </header>
-<?php /* ORIGINAL
+<?php
+/*
+ 
+    global $wp;
+    $current_url = home_url(add_query_arg(array(), $wp->request));
+?>
+<div class="login-window hide-login">
+    <div class="login-box">
+        <div class="exit-button">&times;</div>
+    <img class="home-logo" src="/wp-content/uploads/2020/07/2012-transparency-international-logo-subline-01.png">
+        <h2>Please sign in:</h2>
+        <form method="POST" action="<?php $current_url ?>">
+            <input type="text" placeholder="Username or Email" name="log">
+            <input type="password" placeholder="Password" name="pwd">
+            <input type="checkbox" name="rememberme">
+            <label for="rememberme">Remember Me</label>
+            <input type="hidden" name="login_Sbumit" >
+				<input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Log In">
+				<input type="hidden" name="redirect_to" value="<?php $current_url?>">
+        </form>
+    </div>
+</div>
+*/ ?>
+<?php 
+
+
+/* ORIGINAL
 <header id="header">
 <div id="branding">
 <div id="site-title">

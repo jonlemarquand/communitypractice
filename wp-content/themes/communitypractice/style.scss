@@ -74,6 +74,8 @@ a {
 }
 
 header {
+    position: sticky;
+    top: 0;
     width: 100%;
 
     .loginbar {
@@ -137,10 +139,6 @@ header {
     align-items: center;
     margin-bottom: 120px;
 
-    .home-logo {
-        width: 350px;
-        margin: -15px auto;
-    }
     .home-div {
         display: flex;
         flex-direction: column;
@@ -152,6 +150,11 @@ header {
             margin-bottom: 16px;
         }
     }
+}
+
+.home-logo {
+    width: 350px;
+    margin: -15px auto;
 }
 
 .options-section {
@@ -245,6 +248,7 @@ header {
 .nav-menu {
     display: flex;
     justify-content: space-between;
+    background: $tiwhite;
 }
 
 #menu-logged-in-main, #menu-logged-out-menu {
@@ -301,19 +305,6 @@ header {
         margin: 10px 0;
     }
 
-    input[type=text], input[type=password], input[type=email] {
-        margin-bottom: 5px;
-        padding: 5px;
-        font-family: $secondaryFont;
-        border: 1px solid $tiblack;
-        
-        &:focus {
-            border: 2px solid $tiblue;
-            outline: none;
-        }
-    
-    }
-
     .member-info {
         display: flex;
         flex-direction: column;
@@ -335,6 +326,19 @@ header {
             flex-direction: column;
             margin-right: 40px;
         }
+    }
+
+}
+
+input[type=text], input[type=password], input[type=email] {
+    margin-bottom: 5px;
+    padding: 5px;
+    font-family: $secondaryFont;
+    border: 1px solid $tiblack;
+    
+    &:focus {
+        border: 2px solid $tiblue;
+        outline: none;
     }
 
 }
@@ -511,4 +515,78 @@ input[type=submit] {
     color: $tiblue;
     margin-bottom: -20px;
     text-transform: uppercase;
+}
+.hide-login {
+    display: none;
+}
+
+.show-login {
+    display: flex;
+}
+
+.login-window {
+    background: rgba(51, 51, 51, 0.8);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+
+    .login-box {
+        background: $tiwhite;
+        position: fixed;
+        height: 600px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h2 {
+            text-align: center;
+        }
+    
+    }
+
+.exit-button {
+    background: $tipink;
+    color: $tiwhite;
+    font-family: $primaryFont;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+
+    &:hover {
+        background: $tigreen;
+        cursor: pointer;
+    }
+}
+
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+}
+
+.no-found {
+    margin: 30px 0;
 }

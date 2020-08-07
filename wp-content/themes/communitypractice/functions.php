@@ -142,6 +142,23 @@ function communitypractice_custom_post_type() {
             'supports' => array('title', 'editor', 'excerpt', 'comments')
         )
     );
+    register_post_type('event',
+        array(
+            'labels'      => array(
+                'name'          => __( 'Events', 'textdomain' ),
+                'singular_name' => __( 'Event', 'textdomain' ),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+            'rewrite'     => array( 'slug' => 'events' ), // my custom slug
+            'show_in_menu' => true,
+            'menu_icon' => 'dashicons-calendar-alt',
+            'menu_position' => 3,
+            'capability_type' => 'post',
+            'taxonomies' => array( 'category', 'region' ),
+            'supports' => array('title', 'editor', 'excerpt', 'comments')
+        )
+    );
 }
 add_action('init', 'communitypractice_custom_post_type');
 

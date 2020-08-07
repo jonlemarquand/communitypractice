@@ -59,11 +59,68 @@ get_header();
         <?php
       }
     }
-    else {
-      echo 'No discusssions found';
+    else { ?>
+      <p class="no-found"><?php echo 'No discussions found'; ?></p> 
+  <?php
     }
   ?>
-              </div>
+      <h2 class="tax-header">Upcoming Events:</h2>
+      <?php
+              $today = date ('Ymd');
+    $args = array(
+      'post_type' => 'event',
+      'meta_key'		=> 'date_start_date',
+      'orderby'			=> 'meta_value',
+      'order'				=> 'DESC',
+      'meta_query' => array(
+        array(
+          'key'		=> 'date_start_date',
+	        'compare'	=> '>=',
+	        'value'		=> $today,
+        )
+        ),
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'region',
+          'field' => 'slug',
+          'terms' => $term
+        )
+      )
+    );
+    $events = new WP_Query( $args );
+    if( $events->have_posts() ) {
+      while( $events->have_posts() ) {
+        $events->the_post();
+        ?>
+        <div class="post-summary">
+          <a href="<?php the_permalink() ?>"><h2><?php the_title() ?></h2></a>
+            <div class="post-info-box">
+                  <p class="post-info"><i class="far fa-clock"></i> <?php the_field('date_start_date');?> - <?php the_field('date_end_date') ?></p>
+
+            </div>
+            <div class="post-info-box">
+                  <p class="post-info">
+                        <i class="fas fa-tags"></i> 
+                        <?php echo get_the_term_list( $post->ID, 'category', '', ', ', '' ); ?> 
+                  </p>
+                  <p class="post-info">
+                        <i class="fas fa-globe-americas"></i>
+                        <?php echo get_the_term_list( $post->ID, 'region', '', ', ', '' ); ?> 
+                  </p>
+            </div>
+          <div class="post-content">
+            <?php the_field('description') ?>
+          </div>
+          <a class="view-button" href="<?php the_permalink() ?>">View Event</a>
+      </div>
+        <?php
+      }
+    }
+    else { ?>
+      <p class="no-found"><?php echo 'No events found'; ?></p> 
+  <?php
+    }
+  ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
