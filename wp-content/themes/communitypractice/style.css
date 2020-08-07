@@ -106,6 +106,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   min-height: 100vh; }
+  @media (max-width: 768px) {
+    body {
+      width: 100%; } }
 
 #wrapper {
   display: flex;
@@ -123,6 +126,11 @@ h1 {
   align-items: center;
   text-align: center;
   text-transform: uppercase; }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 48px;
+      line-height: 48px;
+      margin-bottom: 10px; } }
 
 h2 {
   color: #000000;
@@ -155,6 +163,9 @@ header {
     display: flex;
     flex-direction: row-reverse;
     align-items: center; }
+    @media (max-width: 768px) {
+      header .loginbar {
+        justify-content: space-between; } }
   header .log-button {
     height: 100%;
     width: 120px;
@@ -216,12 +227,19 @@ header {
   width: 840px;
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 768px) {
+    .options-section {
+      width: auto;
+      flex-direction: column; } }
   .options-section .next-step {
     width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center; }
+    @media (max-width: 768px) {
+      .options-section .next-step {
+        margin-bottom: 20px; } }
     .options-section .next-step .link-button {
       padding: 10px;
       width: 180px;
@@ -254,6 +272,9 @@ header {
 .footer-columns {
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 768px) {
+    .footer-columns {
+      flex-direction: column; } }
   .footer-columns .bigmenuhead {
     font-family: "Oswald", sans-serif;
     line-height: 23px;
@@ -282,11 +303,18 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 120px; }
+  @media (max-width: 768px) {
+    .general-page-content {
+      margin: 40px 20px; } }
 
 .nav-menu {
   display: flex;
   justify-content: space-between;
   background: #ffffff; }
+  @media (max-width: 768px) {
+    .nav-menu {
+      flex-direction: column;
+      align-items: center; } }
 
 #menu-logged-in-main, #menu-logged-out-menu {
   margin-top: 15px;
@@ -336,10 +364,16 @@ header {
     margin: 20px 0; }
   .registration-form .expert-columns {
     display: flex; }
+    @media (max-width: 768px) {
+      .registration-form .expert-columns {
+        flex-direction: column; } }
     .registration-form .expert-columns .expert-column {
       display: flex;
       flex-direction: column;
       margin-right: 40px; }
+      @media (max-width: 768px) {
+        .registration-form .expert-columns .expert-column {
+          margin-bottom: 40px; } }
 
 input[type=text], input[type=password], input[type=email] {
   margin-bottom: 5px;
@@ -378,10 +412,17 @@ input[type=submit] {
   .post-summary .post-info-box {
     display: flex;
     margin: 5px 0; }
+    @media (max-width: 768px) {
+      .post-summary .post-info-box {
+        flex-direction: column;
+        margin: 0; } }
     .post-summary .post-info-box .post-info {
       margin-right: 20px; }
       .post-summary .post-info-box .post-info i {
         color: #3695d8; }
+        @media (max-width: 768px) {
+          .post-summary .post-info-box .post-info i {
+            margin-right: 10px; } }
       .post-summary .post-info-box .post-info a:hover {
         color: #20B9C7; }
   .post-summary .post-content {
@@ -405,6 +446,11 @@ input[type=submit] {
   text-align: left;
   line-height: 64px;
   margin-bottom: 20px; }
+  @media (max-width: 768px) {
+    .discussion-template h1 {
+      font-size: 48px;
+      line-height: 48px;
+      margin-bottom: 10px; } }
 .discussion-template h2 {
   color: #3695d8;
   margin-top: 20px; }
@@ -412,6 +458,9 @@ input[type=submit] {
   display: flex;
   flex-direction: row;
   margin-bottom: 40px; }
+  @media (max-width: 768px) {
+    .discussion-template .post-info-box {
+      flex-direction: column; } }
   .discussion-template .post-info-box .post-info {
     margin-right: 20px; }
 .discussion-template .comment-author {

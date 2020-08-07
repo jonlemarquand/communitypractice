@@ -22,12 +22,17 @@ $tiblack: #000000;
 $tigrey: #999;
 $secondaryFont: 'Open Sans', sans-serif;
 $primaryFont: 'Oswald', sans-serif;
+$breakpointTablet: 768px;
+$breakpointMobile: 480px;
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}button{outline:0}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}q{display:inline;font-style:italic}q:before{content:'"';font-style:normal}q:after{content:'"';font-style:normal}textarea,input[type="text"],input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],input[type="password"]{-webkit-appearance:none;appearance:none;border-radius:0}table{border-collapse:collapse;border-spacing:0}th,td{padding:2px}big{font-size:120%}small,sup,sub{font-size:80%}sup{vertical-align:super}sub{vertical-align:sub}dd{margin-left:20px}kbd,tt{font-family:courier;font-size:12px}ins{text-decoration:underline}del,strike,s{text-decoration:line-through}dt{font-weight:bold}address,cite,var{font-style:italic}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 .sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);position:absolute !important}
 
 body {
     min-height: 100vh;
+    @media (max-width: $breakpointTablet) {
+        width: 100%;
+    }
 }
 
 #wrapper {
@@ -46,7 +51,13 @@ h1 {
     display: flex;
     align-items: center;
     text-align: center;
-    text-transform: uppercase; 
+    text-transform: uppercase;
+    
+    @media (max-width: $breakpointTablet) {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 10px;
+    }
 }
 
 h2 {
@@ -85,6 +96,9 @@ header {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
+        @media (max-width: $breakpointTablet) {
+            justify-content: space-between;
+        }
     }
 
     .log-button {
@@ -162,12 +176,21 @@ header {
     width: 840px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: $breakpointTablet) {
+        width: auto;
+        flex-direction: column;
+    }
+
     .next-step {
         width: 240px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+
+        @media (max-width: $breakpointTablet) {
+            margin-bottom: 20px;
+        }
 
         .link-button {
             padding: 10px;
@@ -208,6 +231,10 @@ header {
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: $breakpointTablet) {
+        flex-direction: column;
+    }
+
     .bigmenuhead {
         font-family: $primaryFont;
         line-height: 23px;
@@ -243,12 +270,21 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 120px;
+
+    @media (max-width: $breakpointTablet) {
+        margin: 40px 20px;
+    }
 }
 
 .nav-menu {
     display: flex;
     justify-content: space-between;
     background: $tiwhite;
+
+    @media (max-width: $breakpointTablet) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 #menu-logged-in-main, #menu-logged-out-menu {
@@ -321,10 +357,18 @@ header {
     .expert-columns {
         display: flex;
 
+        @media (max-width: $breakpointTablet) {
+            flex-direction: column;
+        }
+
         .expert-column {
             display: flex;
             flex-direction: column;
             margin-right: 40px;
+        
+            @media (max-width: $breakpointTablet) {
+                margin-bottom: 40px;
+            }
         }
     }
 
@@ -381,10 +425,18 @@ input[type=submit] {
         display: flex;
         margin: 5px 0;
     
+        @media (max-width: $breakpointTablet) {
+            flex-direction: column;
+            margin: 0;
+        }
         .post-info {
             margin-right: 20px;
             i {
              color: $tiblue;
+             @media (max-width: $breakpointTablet) {
+                margin-right: 10px;
+            }
+            
             }
             a:hover {
                 color: $tigreen;
@@ -419,6 +471,11 @@ input[type=submit] {
         text-align: left;
         line-height: 64px;
         margin-bottom: 20px;
+        @media (max-width: $breakpointTablet) {
+            font-size: 48px;
+            line-height: 48px;
+            margin-bottom: 10px;
+        }    
     }
     h2 {
         color: $tiblue;
@@ -429,6 +486,9 @@ input[type=submit] {
         display: flex;
         flex-direction: row;
         margin-bottom: 40px;
+        @media (max-width: $breakpointTablet) {
+            flex-direction: column;
+        }
         .post-info {
             margin-right: 20px;
         }
